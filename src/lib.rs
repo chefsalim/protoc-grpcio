@@ -210,6 +210,7 @@ where
     Output: AsRef<Path>
 {
     let protoc = Protoc::from_env_path();
+    println!("protoc version is_3?: {}", protoc.version()?.is_3());
 
     protoc
         .check()
