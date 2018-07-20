@@ -221,6 +221,9 @@ where
 
     let descriptor_set = Temp::new_file()?;
 
+    println!("stringified inputs: {:?}", stringified_inputs);
+    println!("stringified_includes: {:?}", stringified_includes);
+
     protoc
         .write_descriptor_set(DescriptorSetOutArgs {
             out: match descriptor_set.as_ref().to_str() {
